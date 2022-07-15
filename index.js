@@ -15,40 +15,88 @@ function playRound(playerChoice,computerChoice){
     switch(choiceP){
         case "ROCK":
             if (computerChoice == "SCISSORS"){
-                return `You Win! ${choiceP} beats ${computerChoice}!`
+                console.log(`You Win! ${choiceP} beats ${computerChoice}!`)
+                return 1
             }
             else if (computerChoice == "ROCK"){
-                return `Tie! ${choiceP} is tied with ${computerChoice}!`
+                console.log(`Tie! ${choiceP} is tied with ${computerChoice}!`); 
+                return 0
             }
-            return `You Lose! ${computerChoice} beats ${choiceP}!`
-
+            console.log(`You Lose! ${computerChoice} beats ${choiceP}!`);
+            return -1
         case "PAPER":
             if (computerChoice == "ROCK"){
-                return `You Win! ${choiceP} beats ${computerChoice}!`
+                console.log(`You Win! ${choiceP} beats ${computerChoice}!`)
+                return 1
             }
             else if (computerChoice == "PAPER"){
-                return `Tie! ${choiceP} is tied with ${computerChoice}!`
+                console.log(`Tie! ${choiceP} is tied with ${computerChoice}!`); 
+                return 0
             }
-            return `You Lose! ${computerChoice} beats ${choiceP}!`
-
+            console.log(`You Lose! ${computerChoice} beats ${choiceP}!`);
+            return -1
+            
         case "SCISSORS":
             if (computerChoice == "PAPER"){
-                return `You Win! ${choiceP} beats ${computerChoice}!`
+                console.log(`You Win! ${choiceP} beats ${computerChoice}!`)
+                return 1
             }
             else if (computerChoice == "SCISSORS"){
-                return `Tie! ${choiceP} is tied with ${computerChoice}!`
+                console.log(`Tie! ${choiceP} is tied with ${computerChoice}!`); 
+                return 0
             }
-            return `You Lose! ${computerChoice} beats ${choiceP}!`
-    }
+            console.log(`You Lose! ${computerChoice} beats ${choiceP}!`);
+            return -1
+        }
 }
-
-let computerChoice = computerSelection()
-
-for (let i = 0; i < 5; i++){
-    let playerChoice = prompt("Input Rock, Paper, or Scissors! ")
+let playerChoice = ""
+let playerScore = 0
+let computerScore = 0
+function playGame(item){
+    playerChoice = item;
     let computerChoice = computerSelection()
     console.log("Player Picked " + playerChoice.toUpperCase());
     console.log("Computer Picked " + computerChoice);
-    console.log(playRound(playerChoice,computerChoice));
+    scoreKeeper(playRound(playerChoice,computerChoice));
+    
     console.log('\n');
+
+    if (computerScore > 5){
+        alert("Game OVER!")
+        window.location.reload()
+
+    }
+    
+    if (playerScore > 5){
+        alert("You WIN!")
+        window.location.reload()
+    }
+    
 }
+
+function scoreKeeper(score){
+
+    if (score == 1){
+        playerScore+=1
+        document.getElementById("player-score").innerText = playerScore
+    }
+    else if (score == -1){
+        computerScore+=1
+        document.getElementById("computer-score").innerText = computerScore
+    }
+}
+
+
+
+// console.log(playerChoice);
+
+
+// for (let i = 0; i < 5; i++){
+    
+    
+        // let computerChoice = computerSelection()
+        // console.log("Player Picked " + playerChoice.toUpperCase());
+        // console.log("Computer Picked " + computerChoice);
+        // console.log(playRound(playerChoice,computerChoice));
+        // console.log('\n');
+// }
