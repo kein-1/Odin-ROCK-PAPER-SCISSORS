@@ -1,5 +1,5 @@
 body {
-    
+    background-color: wheat;
     background-size: cover;
     font-weight: bold;
     text-align: center;
@@ -16,11 +16,10 @@ h2 {
     margin-bottom: 20px;
 }
 
-button {
+.rock,.paper,.scissors{
     border: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: rgb(21, 219, 54);
     font-weight: bold;
     width: 200px;
     margin-bottom: 5px;
@@ -42,3 +41,14 @@ button {
     gap: 50px;
     justify-content: space-between;
 }
+
+#rock{
+    background: url(./images/Rock.svg);
+}
+#paper{
+    background-image: url(./images/Paper.svg);
+}
+#scissors{
+    background-image: url(./images/Scissors.svg);
+}
+

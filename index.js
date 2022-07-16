@@ -79,10 +79,15 @@ function scoreKeeper(score){
     if (score == 1){
         playerScore+=1
         document.getElementById("player-score").innerText = playerScore
+        document.getElementById("prev-game").innerText = "You won this round!"
     }
     else if (score == -1){
         computerScore+=1
         document.getElementById("computer-score").innerText = computerScore
+        document.getElementById("prev-game").innerText = "You lost this round!"
+    }
+    else{
+        document.getElementById("prev-game").innerText = "Tie Round!"
     }
 }
 
