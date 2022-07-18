@@ -61,13 +61,12 @@ function playGame(item){
     
     console.log('\n');
 
-    if (computerScore > 5){
+    if (computerScore > 4){
         alert("Game OVER!")
         window.location.reload()
-
     }
     
-    if (playerScore > 5){
+    if (playerScore > 4){
         alert("You WIN!")
         window.location.reload()
     }
@@ -92,16 +91,3 @@ function scoreKeeper(score){
 }
 
 
-
-// console.log(playerChoice);
-
-
-// for (let i = 0; i < 5; i++){
-    
-    
-        // let computerChoice = computerSelection()
-        // console.log("Player Picked " + playerChoice.toUpperCase());
-        // console.log("Computer Picked " + computerChoice);
-        // console.log(playRound(playerChoice,computerChoice));
-        // console.log('\n');
-// }

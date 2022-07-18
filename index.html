@@ -16,30 +16,31 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div class="header">
+            Rock Paper Scissors
+        </div>
         <div class = "game-container">
             <div>
-            <p>Player's Score </p>
-            <h1 id="player-score">0</h1>
+            <p class="game-score">Player's Score </p>
+                <h1 id="player-score">0</h1>
             </div>
             <div>
-            <p>Computer's Score </p>
+                <p class="game-score">Computer's Score </p>
             <h1 id="computer-score">0</h1>
             </div>
         </div>
-        <button id="rock" onClick="playGame(this.id)" src = "./images/Rock.svg">Rock </button>
-        <button id="paper" onClick="playGame(this.id)"> Paper </button>
-        <button id="scissors" onClick="playGame(this.id)"> Scissors </button>
-        
+        <div>
+            <p class="action-text"> Choose Your Move!</p>
+        </div>
+        <div class="btn-container">
+            <button id="rock" onClick="playGame(this.id)"></button>
+            <button id="paper" onClick="playGame(this.id)"> </button>
+            <button id="scissors" onClick="playGame(this.id)"></button>
+        </div>
         <div>
             <p id="prev-game">No game score</p>
             
         </div>
-        
-        <div class="attribution">
-            
-            Coded by <a href="https://github.com/kein-1" >Kein Li</a>.
-        </div>
-
 
         <script src="index.js">
 

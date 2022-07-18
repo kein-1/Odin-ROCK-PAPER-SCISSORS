@@ -1,8 +1,9 @@
 body {
-    background-color: wheat;
+    background-color: rgb(28, 28, 59);
     background-size: cover;
     font-weight: bold;
     text-align: center;
+    padding-top: 100px;
 }
 
 h1 {
@@ -14,6 +15,15 @@ h2 {
     font-size: 50px;
     margin-top: 0;
     margin-bottom: 20px;
+}
+
+.header{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    margin-bottom: 30px;
 }
 
 .rock,.paper,.scissors{
@@ -36,19 +46,53 @@ h2 {
 }
 
 .game-container{
+    border: 2px solid white;
+    margin: 0 100px 0 100px;
+    border-radius: 10px;
     padding: 50px;
     display: flex;
-    gap: 50px;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: space-evenly;
+    color: beige;
 }
 
-#rock{
-    background: url(./images/Rock.svg);
+.action-text{
+    font-size: 40px;
+    color: beige;
 }
-#paper{
-    background-image: url(./images/Paper.svg);
-}
-#scissors{
-    background-image: url(./images/Scissors.svg);
+.btn-container{
+    display:flex;
+    flex-shrink: 0;
+    gap: 100px;
+    justify-content: center;
 }
 
+#rock, #paper, #scissors{
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    border-radius: 50%;
+    border-color: beige;
+    cursor: pointer;
+}
+
+#rock {
+
+    background-image: url("./images/Rock.svg")
+}
+#paper {
+    
+    background-image: url("./images/Paper.svg");
+}
+#scissors {
+    background-image: url("./images/Scissors.svg");
+}
+
+#prev-game{
+    font-size: 40px;
+    color: beige;
+}
+
+.rps-img{
+    background: transparent;
+}
